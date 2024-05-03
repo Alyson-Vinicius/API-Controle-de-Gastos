@@ -1,2 +1,2 @@
 # API-Controle-de-Gastos
- primeiro repositorio vercionado 
+ primeiro verção do repositorio. 
