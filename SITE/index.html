@@ -1,33 +1,42 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title> Tela de Login </title>
     <link rel="stylesheet" type="text/css" href="css-login/style.css">
+    <script src="js/index.js"></script>
 </head>
+
 <body>
 
     <form action="">
         <div>
             <div><label>Email</label></div>
-            <input type="email" name="email" placeholder="Email">
+            <input type="email" name="email" id="email" onchange="validateField()" placeholder="Email">
         </div>
+
         <div>
             <div><label>Senha</label></div>
-            <input type="password" name="password" placeholder="Senha">
+            <input type="password" name="password" onchange="validateField()" id="password" placeholder="Senha">
         </div>
+
         <div>
-            <button type="button" class="clear">Recuperar Senha</button>
-        </div>  
+            <button type="button" class="clear" id="forgot-password" disabled="true">Recuperar Senha</button>
+        </div>
+
         <div>
-            <button type="button" class="solid">Login</button>
-        </div>   <div>
+            <button type="button" class="solid" id="login-button" disabled="true">Login</button>
+        </div>
+
+        <div>
             <button type="button" class="outline">Registrar</button>
-        </div>  
+        </div>
     </form>
+
     
-    <script rel="" type="text/js" href="js/index.js"> </script>
-    
+
 </body>
+
 </html>
