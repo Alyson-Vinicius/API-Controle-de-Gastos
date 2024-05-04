@@ -12,36 +12,18 @@ input{
 
 input , button {
     padding: 10px;
-    margin-bottom: 10px;
     width: -webkit-fill-available;
+}
+
+.form-field{
+    margin-bottom: 10px;
 }
 
 button{
     cursor: pointer;
+    margin-bottom: 10px;
 }
 
-button:active{
-    opacity: 0.8;
-}
 
-button[disabled]{
-    opacity: 0.7;
-}
 
-.clear{
-    background-color: transparent;
-    border: none;
-    color: white;
-}
 
-.solid{
-    background: white;
-    border: none;
-    color:  rgb(45 ,211 , 111);;
-}
-
-.outline{
-    background: transparent;
-    color: white;
-    border:1px solid white;
-}
