@@ -8,6 +8,14 @@ function onChangePassword() {
 	togglePassworErro();
 }
 
+function login(){
+	window.location.href = "pages/HOME/home.html";
+}
+
+function register(){
+window.location.href = "pages/Registrar/register.html";
+}
+
 function isEmailValid() {
 	const email = form.email().value;
 	if (!email) {
@@ -21,14 +29,14 @@ function toggleEmailErros() {
 	emailRequeridErro().style.display = email ? "none" : "Block";
 
 	emailInvalidErro().style.display = validateEmail(email) ? "none" : "block";
-	
+
 }
 
 function togglePassworErro() {
 	const password = form.password().value;
 
 	passwordRequeridErro().style.display = password ? "none" : "block";
-	
+
 }
 
 
@@ -48,9 +56,6 @@ function isPasswordvalid() {
 	}
 	return true;
 }
-
-
-
 
 const form = {
 	email: () => document.getElementById('email'),

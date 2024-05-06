@@ -6,9 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title> Tela de Login </title>
     <link rel="stylesheet" type="text/css" href="global.css">
-    <link rel="stylesheet" type="text/css" href="css-login/style.css">
-    <script  src="index.js"></script>   
-    <script  src="validate.js"></script>  
+    <link rel="stylesheet" type="text/css" href="css-login/style.css">  
                       
     
 </head>
@@ -34,18 +32,36 @@
         </div>
 
         <div>
-            <button type="button" class="solid" id="login-button" disabled="true">Login</button>
+            <button type="button" class="solid" id="login-button" disabled="true" onclick="login()">Login</button>
         </div>
 
         <div>
-            <button type="button" class="outline">Registrar</button>
+            <button type="button" class="outline" onclick="register()">Registrar</button>
         </div>
     </form>
 
+    <script  src="script.js"></script>   
+    <script  src="validate.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.11.1/firebase-app=compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.11.1/firebase-auth=compat.js"></script>
     <script>
-        
+         const firebaseConfig = {
+    apiKey: "AIzaSyCzVpUgjAAIp68Auyc3EauDzSyc86RcNsU",
+    authDomain: "controle-de-gastos-22898.firebaseapp.com",
+    projectId: "controle-de-gastos-22898",
+    storageBucket: "controle-de-gastos-22898.appspot.com",
+    messagingSenderId: "23126576368",
+    appId: "1:23126576368:web:7dba7bea61e162d203c635"
+  };
+  firebase.initializeApp(firebaseConfig)
+    console.log('antes');
+  firebase.auth().signInWithEmailAndPassword("alysonsad422@email.com","123123").then(Response => {
+    console.log('seccess', Response)
+  }).catch(error => {
+    console.log('error', error )
+  });
+  console.log('depois');
     </script>
-
 </body>
 
 </html>
