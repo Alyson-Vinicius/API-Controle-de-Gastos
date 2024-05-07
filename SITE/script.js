@@ -8,12 +8,25 @@ function onChangePassword() {
 	togglePassworErro();
 }
 
-function login(){
-	window.location.href = "pages/HOME/home.html";
+function login() {
+	firebase.auth().signInWithEmailAndPassword(
+		form.email().value, form.password().value).then(Response => {
+			window.location.href = "pages/HOME/home.html";
+		}).catch(error => {
+			alert(getErroMessage(error));
+		});
+
 }
 
-function register(){
-window.location.href = "pages/Registrar/register.html";
+function getErroMessage(error) {
+	if (error.code == "auth/user-not-found") {
+		return "usuário não encontrado"
+	}
+	return error.message;
+}
+
+function register() {
+	window.location.href = "pages/Registrar/register.html";
 }
 
 function isEmailValid() {
