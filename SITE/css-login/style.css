@@ -15,22 +15,6 @@ body{
     height: 100vh;
 }
 
-.card{
-    height: fit-content;
-	width: 100%;
-	background: rgb(123, 223, 140);
-	display: flex;
-	align-items: center;
-	justify-content: center;
-    margin: 5px;
-	padding: 0;
-	box-sizing: border-box;
-	flex-direction: column;
-	padding: 30px 40px;
-	border-radius: 8px;
-	gap:20px;
-	box-shadow: 5px 5px 8px rgba(0,0,0,0.336);
-}
 
 input{
     border: none;
@@ -49,37 +33,4 @@ button{
     cursor: pointer;
     margin-bottom: 10px;
 }
-
-.clear{
-    background-color: transparent;
-    border: none;
-    color: white;
-}
-
-.solid{
-    background: white;
-    border: none;
-    color:  rgb(45 ,211 , 111);;
-}
-
-.outline{
-    background: transparent;
-    color: white;
-    border:1px solid white;
-}
-
-button:active{
-    opacity: 0.8;
-}
-
-button[disabled]{
-    opacity: 0.7;
-}
-
-.erro{
-    color:white;
-    background-color: red;
-    display: none;
-}
-
 
