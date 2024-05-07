@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+
+
+  <head>
+    <title>login</title>
+    <meta charset="utf-8">
+    <meta name="description" content="Página do Burnes sobre HTML e CSS">
+    <meta name="keywords" content="html, css, js, site">
+    <meta name="robots" content="index">
+   <link rel="stylesheet" type="text/css" href="css/style.css">
+  </head>
+
+
+<body>
+  <div class="main-login">
+    <div class="left-login">
+      <h1>Faça login <br> e conheça meu portifolio </h1>
+      <img src="imagem/dev.svg" class="left-logim-imagem" alt="style.css">
+
+
+    </div>
+    <div class="right-login">
+      <div class="card-login">
+        <h1>LOGIN</h1>
+        <div class="textfield">
+          <label for="usuario">Usuário</label>
+          <input type="text" name="usuario" placeholder="Usuário">
+        </div>
+        <div class="textfield">
+          <label for="senha">Senha</label>
+          <input type="password" name="senha" placeholder="Senha">
+        </div>
+        <button class="btn-login">Login</button>
+      </div>
+    </div>
+  </div>
+
+  
+
+
+  <script>
+  document.querySelector('.btn-login').addEventListener('click', function() {
+    const userInput = document.querySelector('input[name=usuario]');
+    const passInput = document.querySelector('input[name=senha]');
+
+    if (userInput.value === '' || passInput.value === '') {
+      alert('Por favor, preencha todos os campos antes de fazer login.');
+    } else {
+      alert(`Bem-vindo(a), ${userInput.value}!`);
+    }
+  });
+</script>
+  
+</body>
+
+</html>
