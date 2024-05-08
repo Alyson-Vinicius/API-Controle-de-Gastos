@@ -39,7 +39,7 @@ function isEmailValid() {
 
 function toggleEmailErros() {
 	const email = form.email().value;
-    emailRequeridErro().style.display = email ? "none" : "Block";
+    emailRequeridErro().style.display = email ? "block" : "none";
 	
 	emailInvalidErro().style.display = validateEmail(email) ? "none" : "block";
 }
@@ -47,7 +47,7 @@ function toggleEmailErros() {
 function togglePassworErro() {
 	const password = form.password().value;
 
-	passwordRequeridErro().style.display = password ? "none" : "block";
+	passwordRequeridErro().style.display = password ? "block" : "none";
 }
 
 
