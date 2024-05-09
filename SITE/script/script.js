@@ -9,16 +9,16 @@ function onChangePassword() {
 }
 
 function login() {
-	showLoading();
+  showLoading();
   firebase
     .auth()
     .signInWithEmailAndPassword(form.email().value, form.password().value)
     .then((Response) => {
-		hideLoading();
+      hideLoading();
       window.location.href = "pages/HOME/home.html";
     })
     .catch((error) => {
-		hideLoading();
+      hideLoading();
       alert(getErroMessage(error));
     });
 }
@@ -34,20 +34,24 @@ function getErroMessage(error) {
 }
 
 function register() {
-	showLoading();
+  showLoading();
   window.location.href = "pages/Registrar/register.html";
   hideLoading();
 }
 
 function recoverPassword() {
-	showLoading();
-	firebase.auth().sendPasswordResetEmail(form.email().value).then(() =>{
-		hideLoading();
-		alert("email enviado com sucesso");
-	}).catch(error =>{
-		hideLoading();
-		alert(getErroMessage(error));
-	})
+  showLoading();
+  firebase
+    .auth()
+    .sendPasswordResetEmail(form.email().value)
+    .then(() => {
+      hideLoading();
+      alert("email enviado com sucesso");
+    })
+    .catch((error) => {
+      hideLoading();
+      alert(getErroMessage(error));
+    });
 }
 
 function isEmailValid() {
