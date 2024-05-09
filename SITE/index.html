@@ -29,13 +29,13 @@
 
         <div class="form-field">
             <div><label>Senha</label></div>
-            <input type="password" name="password" onclick="recoverPassword()" onchange="onChangePassword()" id="password" placeholder="Senha">
+            <input type="password" name="password"  onchange="onChangePassword()" id="password" placeholder="Senha">
             <div class="erro" id="password-requerid-erro">Senha é obrigatorio</div>
             
         </div>
 
         <div>
-            <button type="button" class="clear" id="forgot-password" disabled="true">Recuperar Senha</button>
+            <button type="button" class="clear" onclick="recoverPassword()" id="forgot-password" disabled="true">Recuperar Senha</button>
         </div>
         
         <div>

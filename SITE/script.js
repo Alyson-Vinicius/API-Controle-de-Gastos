@@ -24,17 +24,19 @@ function login() {
 }
 
 function getErroMessage(error) {
-  if (error.code == "auth/user-not-found") {
+  if (error.code == "auth/invalid-credential") {
     return "usuário não encontrado";
   }
-  if (error.code == "auth/wrong-password") {
+  if (error.code == "auth/missing-email") {
     return "Senha Invalida";
   }
   return error.message;
 }
 
 function register() {
+	showLoading();
   window.location.href = "pages/Registrar/register.html";
+  hideLoading();
 }
 
 function recoverPassword() {
