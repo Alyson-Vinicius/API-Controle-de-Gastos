@@ -5,10 +5,45 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title> REGISTRAR </title>
+
+    <link rel="stylesheet" href="../../css-login/registro.css">
+    <link rel="stylesheet" href="../../css-login/glabal.css">
+
+    <script src="../../script/registro.js"></script>
+    <script src="../../script/validate.js"></script>
 </head>
 
-<body>
-<h1>REGISTRAR</h1> 
+<body class="centralize">
+    <form action="">
+        <div class="card">
+            <h1>REGISTRAR</h1>
+
+            <div class="form-field">
+                <div><label for="">Email</label></div>
+                <input type="email" id="email" placeholder="email" onchange="onChangeEmail()" >
+                <div class="error" id="email-invalid-erro">Email invalido</div>
+                <div class="error" id="email-requerid-erro">Email é obrigatorio</div>
+            </div>
+            <div class="form-field">
+                <div><label for="">Senha</label></div>
+                <input type="password" id="password" placeholder="senha">
+                <div class="error" onchange="onChangePassword()" id="password-requerid-erro">Senha é obrigatorio</div>
+                <div class="error" id="password-min-length-erro">Senha deve ter pelo menos 6 caracteres</div>
+            </div>
+            <div class="form-field">
+                <div><label for=""> Confirmar Senha</label></div>
+                <input type="password" onchange="onChangeConfirmPassword()" id="confirmPassword" placeholder="confirmar senha">
+                <div class="error" id="password-doesnt-match-erro">Senha e confirmar senha devem ser iguais</div>
+
+            </div>
+            <div>
+                <button type="button" class="solid" id="register-button" disabled="true">Regidtrar</button>
+            </div>
+            <div>
+                <button type="button" class="clear">Login</button>
+            </div>
+        </div>
+    </form>
 </body>
 
 </html>
