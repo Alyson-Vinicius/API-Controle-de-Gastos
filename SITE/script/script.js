@@ -1,6 +1,6 @@
 function onChangeEmail() {
   toggleButtonsDisable();
-  toggleEmailErros();
+  toggleEmailErro();
 }
 
 function onChangePassword() {
@@ -64,15 +64,15 @@ function isEmailValid() {
 
 function toggleEmailErros() {
   const email = form.email().value;
-  emailRequeridErro().style.display = email ? "block" : "none";
+  emailRequeridErro().style.display = email ? 'block' : 'none';
 
-  emailInvalidErro().style.display = validateEmail(email) ? "none" : "block";
+  emailInvalidErro().style.display = validateEmail(email) ? 'none' : 'block';
 }
 
 function togglePassworErro() {
   const password = form.password().value;
 
-  passwordRequeridErro().style.display = password ? "block" : "none";
+  passwordRequeridErro().style.display = password ? 'block' : 'none';
 }
 
 function toggleButtonsDisable() {
