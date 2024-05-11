@@ -45,6 +45,12 @@ input , button {
     width: -webkit-fill-available;
 }
 
+.error{
+    color:white;
+    background-color: red;
+    display: none;
+}
+
 .clear{
     background-color: transparent;
     border: none;
@@ -69,10 +75,4 @@ button:active{
 
 button[disabled]{
     opacity: 0.7;
-}
-
-.error{
-    color:white;
-    background-color: red;
-    display: none;
 }
