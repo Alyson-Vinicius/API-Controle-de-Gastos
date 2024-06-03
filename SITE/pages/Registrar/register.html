@@ -6,11 +6,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title> REGISTRAR </title>
 
-    <link rel="stylesheet" href="../../css-login/registro.css">
-    <link rel="stylesheet" href="../../css-login/glabal.css">
-
+    
     <script src="../../script/registro.js"></script>
     <script src="../../script/validate.js"></script>
+    <script  src="../../script/loading.js"></script>
+    <script  src="../../script/firebase-init.js"></script>
+    
+    <script src="https://www.gstatic.com/firebasejs/10.11.1/firebase-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.11.1/firebase-auth-compat.js"></script>   
+
+    <link rel="stylesheet" href="../../css-login/registro.css">
+    <link rel="stylesheet" href="../../css-login/glabal.css">
 </head>
 
 <body class="centralize">
@@ -37,7 +43,7 @@
 
             </div>
             <div>
-                <button type="button" class="solid" id="register-button" disabled="true">Regidtrar</button>
+                <button type="button" class="solid" onclick="register()" id="register-button" disabled="true">Regidtrar</button>
             </div>
             <div>
                 <button type="button" class="clear">Login</button>

@@ -1,20 +1,20 @@
 function onChangeEmail() {
   const email = form.email().value;
-  form.emailRequeridErro().style.display = email ? 'none' : 'block';
+  form.emailRequeridErro().style.display = email ? "none" : "block";
 
   form.emailInvalidErro().style.display = validateEmail(email)
-    ? 'none'
-    : 'block';
+    ? "none"
+    : "block";
 
   toggleButtonRegisterDisable();
 }
 
 function onChangePassword() {
   const password = form.password().value;
-  form.passwordRequeridErro().style.display = password ? 'none' : 'block';
+  form.passwordRequeridErro().style.display = password ? "none" : "block";
 
   form.passwordMinLengthRequeridErro().style.display =
-    password.length >= 6 ? 'none' : 'block';
+    password.length >= 6 ? "none" : "block";
 
   validatePassworMatch();
   toggleButtonRegisterDisable();
@@ -25,12 +25,33 @@ function onChangeConfirmPassword() {
   toggleButtonRegisterDisable();
 }
 
+function register() {
+  showLoading();
+  const email = form.email().value;
+  const password = form.password().value;
+  firebase
+    .auth()
+    .createUserWithEmailAndPassword(email , password)
+    .then(() => {
+      hideLoading();
+      window.location.href = "pages/HOME/home.html";
+    })
+    .cath((error) => {
+      hideLoading();
+      alert(getErrorMessage(error));
+    });
+}
+
+function getErrorMessage(error) {
+  return error.menssage;
+}
+
 function validatePassworMatch() {
   const password = form.password().value;
   const confirmPassword = form.confirmPassword().value;
 
   form.confirmPsswordDoesntMatchErro().style.display =
-    password == confirmPassword ? 'none' : 'block';
+    password == confirmPassword ? "none" : "block";
 }
 
 function toggleButtonRegisterDisable() {
@@ -52,7 +73,7 @@ function isFormValid() {
   if (password != confirmPassword) {
     return false;
   }
-  
+
   return true;
 }
 
