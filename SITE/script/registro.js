@@ -31,7 +31,7 @@ function register() {
   const password = form.password().value;
   firebase
     .auth()
-    .createUserWithEmailAndPassword(email , password)
+    .createUserWithEmailAndPassword(email, password)
     .then(() => {
       hideLoading();
       window.location.href = "pages/HOME/home.html";
