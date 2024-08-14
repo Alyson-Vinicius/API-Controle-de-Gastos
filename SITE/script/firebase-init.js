@@ -1,3 +1,4 @@
+firebase.initializeApp(firebaseConfig);
 const firebaseConfig = {
   apiKey: "AIzaSyCzVpUgjAAIp68Auyc3EauDzSyc86RcNsU",
   authDomain: "controle-de-gastos-22898.firebaseapp.com",
@@ -6,4 +7,3 @@ const firebaseConfig = {
   messagingSenderId: "23126576368",
   appId: "1:23126576368:web:7dba7bea61e162d203c635"
 };
-firebase.initializeApp(firebaseConfig);
